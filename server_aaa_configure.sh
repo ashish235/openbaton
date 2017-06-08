@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "This was run" > /tmp/out.log
+echo "This was run" >> /tmp/out.log
