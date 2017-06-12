@@ -16,7 +16,7 @@ if [[ -z $AAA_HOME ]]; then
 fi
 
 if [ ! `su - alepo -c "$AAA_HOME/alepoaaa status| grep 'running' " ` ]; then
-	su alepo -c "$AAA_HOME/alepoaaa start"
+	su - alepo -c "export LD_LIBRARY_PATH=/home/alepo/alepoaaa/;/home/alepo/alepoaaa/alepoaaa start"
 	echo "AAA starting"
 	
 fi
