@@ -25,4 +25,4 @@ if [[ -z $ORACLE_HOME ]]; then
 fi
 
  su alepo -c "sed -i -e 's/^ConnectStr=.*/ConnectStr=$SERVICE_NAME;$USER;$PASSWORD/' ${AAA_CONFG}"
- su alepo -c "sed -i -e 's/(ADDRESS=.*/(ADDRESS = (PROTOCOL = TCP)(HOST = $HOST)(PORT = 1521))/' $TNS_CONFG"
+ su oracle -c "sed -i -e 's/(ADDRESS=.*/(ADDRESS = (PROTOCOL = TCP)(HOST = $HOST)(PORT = 1521))/' $TNS_CONFG"
