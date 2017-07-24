@@ -15,7 +15,6 @@ if [[ -z $AAA_HOME ]]; then
 	 exit 1
 fi
 
-cause=$1
 case "$cause" in
 
 ("serviceDown") 
