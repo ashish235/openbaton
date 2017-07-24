@@ -24,7 +24,7 @@ case "$cause" in
 			su - alepo -c "rm -fr $AAA_HOME/alepoaaaserver.pid"
 	fi
 	# start AAA services.
-	su alepo -c "$AAA_HOME/alepoaaa start"
+	su - alepo -c "export LD_LIBRARY_PATH=/home/alepo/alepoaaa/;/home/alepo/alepoaaa/alepoaaa start"
 	# check if AAA services successfully started
 	if [ ! `su - alepo -c "$AAA_HOME/alepoaaa status| grep 'running' " ` ]; then
 		echo "ERROR: the AAA is not started"
